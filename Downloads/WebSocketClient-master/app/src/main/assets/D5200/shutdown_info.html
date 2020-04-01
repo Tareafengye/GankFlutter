@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>停运信息</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="css/shutdown.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/shutdown_info.js"></script>
+<script>
+	function showMsgInAndroid(){
+		webCtrl.finish();
+	}
+</script>
+</head>
+<body>
+	<div class="header">
+		<div class="header_left" onclick="showMsgInAndroid()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+		<div class="header_center">停运信息</div>
+		<div class="header_right"></div>
+	</div>
+	<div class="up_tab">
+		<div class="up_tab_1" id="tab_left" onclick="select_type1()">
+			<div class='up_tab_text' id='tab_left_text'>当前停运</div>
+			<div class='up_tab_mark' id='tab_left_mark'><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+		</div>
+		<div class="up_tab_2" id="tab_right" onclick="select_type2()">
+			<div class='up_tab_text' id='tab_right_text'>全部类型</div>
+			<div class='up_tab_mark' id='tab_right_mark'><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+		</div>
+	</div>
+	<div id='select_div1' class='select_div1_off'>
+		<div class='select_item_left' id='item_1' onclick='select_type(1)'>
+			<div class='left_item_text' id='item_text_1'>当前停运</div>
+			<div class='left_item_mark' id='item_mark_1'></div>
+		</div>
+		<div class='select_item_left' id='item_2' onclick='select_type(2)'>
+			<div class='left_item_text' id='item_text_2'>历史停运</div>
+			<div class='left_item_mark' id='item_mark_2'></div>
+		</div>
+	</div>
+	<div id='select_div2' class='select_div2_off'>
+		<div class='select_item_right' id='item_3' onclick='select_type(3)'>
+			<div class='right_item_text' id='item_text_3'>全部类型</div>
+			<div class='right_item_mark' id='item_mark_3'></div>
+		</div>
+		<div class='select_item_right' id='item_4' onclick='select_type(4)'>
+			<div class='right_item_text' id='item_text_4'>计划停电</div>
+			<div class='right_item_mark' id='item_mark_4'></div>
+		</div>
+		<div class='select_item_right' id='item_5' onclick='select_type(5)'>
+			<div class='right_item_text' id='item_text_5'>故障停电</div>
+			<div class='right_item_mark' id='item_mark_5'></div>
+		</div>
+	</div>
+	<div id='discover' class='discover_off'>
+		
+	</div>
+	<div class="navigation">
+	</div>
+	<div class='infos' id='infos_div'>
+		<!-- <div class="info" id="info_1"> -->
+			<!-- <div class="info_title"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;嘉泽上浮村赵家</div> -->
+			<!-- <div class="power_body" onclick='turntogis()'> -->
+				<!-- <div class='start_item'> -->
+					<!-- <div class="start_img">停</div>&nbsp -->
+					<!-- <div class="start_value">2018-05-22 17:00:00</div> -->
+				<!-- </div> -->
+				<!-- <div class='powercut_info'> -->
+					<!-- <div class="property_info">停电信号：</div> -->
+					<!-- <div class="station_info">所属台区：</div> -->
+				<!-- </div> -->
+				<!-- <div class='end_item'> -->
+					<!-- <div class="end_img">复</div>&nbsp -->
+					<!-- <div class="end_value">2018-05-22 17:00:00</div> -->
+				<!-- </div> -->
+			<!-- </div> -->
+			<!-- <div class="navigation"></div> -->
+		<!-- </div> -->
+	</div>
+	
+	<div class='foot'>
+		<div class='foot_item_first' onclick='change_item(1)'>
+			<div class='item_top' id='item_top_1'><img style='height:20px;' src='img/pb_on.png'/></div>
+			<div class='item_bottom green' id='item_bottom_1'>配变</div>
+		</div>
+		<div class='foot_item' onclick='change_item(2)'>
+			<div class='item_top' id='item_top_2'><img style='height:20px;' src='img/xl_off.png'/></div>
+			<div class='item_bottom' id='item_bottom_2'>低压线路</div>
+		</div>
+		<div class='foot_item' onclick='change_item(3)'>
+			<div class='item_top' id='item_top_3'><img style='height:20px;' src='img/yhbx_off.png'/></div>
+			<div class='item_bottom' id='item_bottom_3'>用户表箱</div>
+		</div>
+	</div>
+</body>
+</html>

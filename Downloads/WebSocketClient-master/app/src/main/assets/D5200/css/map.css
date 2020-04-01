@@ -1,0 +1,12 @@
+.ol-overlaycontainer-stopevent{
+	display:none;
+}
+.ol-mouse-position{
+	display:none;
+}
+.ol-overviewmap ol-unselectable ol-control ol-collapsed{
+	display:none;
+}
+.ol-scale-line ol-unselectable{
+	display:none;
+}

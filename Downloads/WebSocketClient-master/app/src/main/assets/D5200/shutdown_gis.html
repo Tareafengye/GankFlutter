@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>停运信息</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<link rel="stylesheet" href="css/shutdown.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/ol-4.0.css" type="text/css">
+<script type="text/javascript" src="js/ol3.0-debug.js"></script>
+
+
+<script type="text/javascript" src="js/stressmark.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/nariMapIUtil.js"></script>
+<script type="text/javascript" src="js/nariMapIBase.js"></script>
+<script type="text/javascript" src="js/nariMapIService.js"></script>
+<script type="text/javascript" src="js/nariCanvasRender.js"></script>
+<!-- <script type="text/javascript" src="js/nariMapIVecLayer.js"></script> -->
+
+</head>
+<body>
+	<div class="header">
+		<div class="header_left" onclick='goback()'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+		<div class="header_center">停运信息</div>
+		<div class="header_right" onclick='gosinglegrap()'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+	</div>
+	<div id="map" class="map"></div>
+	<div id="gis_info_1">
+		<div class='gis_info_title'>停电信息</div>
+		<div class='gis_info_body'>
+			<div class='gis_info_body_1'>
+				<div id='gis_info_body_1_1'>
+					停电时间
+				</div>
+				<div id='gis_info_body_1_2'>
+					2018-06-12 15:52:00
+				</div>
+			</div>
+			
+			<div class='gis_info_body_2'>
+				<div id='gis_info_body_2_1'>
+					复电时间
+				</div>
+				<div id='gis_info_body_2_2'>
+					2018-06-12 15:52:00
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="device_info">
+		<div class='device_info_title'>设备信息</div>
+		<div class='device_info_body'>
+			<div class='device_info_1'>
+				<div id='device_info_1_1'>
+					设备名称
+				</div>
+				<div id='device_info_1_2'>
+					
+				</div>
+			</div>
+			
+			<div class='device_info_2'>
+				<div id='device_info_2_1'>
+					所属线路
+				</div>
+				<div id='device_info_2_2'>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/shutdown_gis.js"></script>
+</body>
+</html>

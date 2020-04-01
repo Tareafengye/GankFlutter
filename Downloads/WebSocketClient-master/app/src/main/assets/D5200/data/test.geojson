@@ -1,0 +1,8 @@
+﻿{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "SBMC": "玄武门变电箱", "SSXL": "玄武门线路", "LDZT": 0, "LDDY": "220V", "LDDL": "150mA", "LDGL": "33W", "GLJS": 100, "LJYXSJ": "10000分钟", "BCYXSJ": "1000分钟", "SFBZ": 0, "BZDX": 0.000000, "BZYS": 0, "BZFW": 0, "PLFS": 0, "DHZS": 0, "X": 0.000000, "Y": 0.000000, "FHDX": 0.000000, "BZXSZD": null, "BZNR": null, "SSDS": null, "KZFHID": 0, "VERSIONID": 0 }, "geometry": { "type": "Point", "coordinates": [118.780612,32.072743] } }
+]
+}

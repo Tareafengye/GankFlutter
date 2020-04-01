@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>停运信息</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/vconsole.min.js"></script>
+</head>
+<style type="text/css">
+	#form1{
+		float:left;
+		height:260px;
+		width:200px;
+		text-align:center;
+	}
+	#blah{
+		float:left;
+		height:200px;
+		width:200px;
+	}
+	#blah{ 
+		background: #bbbbbb; 
+		width:200px; 
+		color:#555555; 
+		font-family:Arial; 
+		font-size:20px；
+		text-align:center;
+		line-height:200px;
+	}
+</style>
+<body>
+	<form id="form1">
+	
+	<div id="upload_photo">
+		<input type="file" text="点击拍照">
+		<input accept="image/*" type="file" text="点击拍照">
+		<!--<img id="blah"  alt="点击拍照" onclick="upload_photo()"/></br>-->
+	</div>
+	</form></br>
+	<input id="submit" type="button" value="上传照片" onclick="upload_file()">
+	
+	<!-- <form id="form1" runat="server"> -->
+	<!-- <input type='file' id="imgInp" /> -->
+	<!-- <div> -->
+	<!-- <img id="blah" src="#" alt="显示您上传的商品图片" /> -->
+	<!-- </div>   -->
+	<!-- </form> -->
+<script>
+	var vConsole = new VConsole();
+	function readURL(input) {
+	   if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('#blah').attr('src', e.target.result);
+			}
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+	$("#photo").change(function(){
+		readURL(this);
+	});
+	
+	function upload_photo(){
+		document.form1.photo.click();
+	}
+	
+	function upload_file(){
+		var fd = new FormData();
+        fd.append('file', $("#photo")[0].files[0]);
+		
+		$.ajax({
+			url : "http://22.47.46.68:9000/osp/terminalController/rest/file/testLoad",
+			data:{
+				"file": "test"
+			},
+			type : "post",
+			async: false,
+			xhrFields: {
+				withCredentials: true
+			},
+
+			success : function(data) {
+				console.log(data);
+			}
+		
+		});
+	}
+	
+	//response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+	//response.setHeader("Access-Control-Allow-Credentials", "true"); 
+	//response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+
+</script>
+</body>
+</html>
